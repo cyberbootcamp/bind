@@ -14,8 +14,8 @@ start:
 	sudo -E docker run -d --name bind \
 		--mount type=bind,source="$(PWD)/files/etc/hosts",target="/etc/hosts" \
 		--mount type=bind,source="$(PWD)/files/etc/resolv.conf",target="/etc/resolv.conf" \
-		-p 10.55.55.6:53:953/tcp \
-		-p 10.55.55.6:53:953/udp \
+		-p 10.55.55.6:53:53/tcp \
+		-p 10.55.55.6:53:53/udp \
 		kirscht/bind:latest
 
 .PHONY: connect
