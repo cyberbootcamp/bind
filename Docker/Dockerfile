@@ -8,19 +8,9 @@ RUN apt-get update \
  && useradd -m vagrant
 
 WORKDIR /
-#COPY files/bin/entrypoint.sh /bin/entrypoint.sh
-COPY files/etc/* /etc/
-RUN ls /etc/
-RUN md5sum /etc/hosts
-RUN cat /etc/hosts
-RUN cat etc/hosts.ext >> etc/hosts
-RUN cat /etc/hosts
-RUN cat /dev/null > /etc/hosts
-RUN md5sum /etc/hosts
-RUN sort -u /etc/hosts /etc/hosts.ext  
-COPY files/bin/* /bin/
+COPY files/etc/bind/* /etc/bind/
 
-RUN /bin/bash -c cat /etc/hosts
+#COPY files/bin/entrypoint.sh /bin/entrypoint.sh
 #RUN chmod 755 /bin/entrypoint.sh && chown vagrant:vagrant /bin/entrypoint.sh
 #RUN mkdir /var/log/entrypoint && chown vagrant:vagrant /var/log/entrypoint
 
