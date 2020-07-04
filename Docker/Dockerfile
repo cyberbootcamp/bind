@@ -13,6 +13,8 @@ COPY files/ /
 RUN chmod 755 /bin/entrypoint.sh && chown vagrant:vagrant /bin/entrypoint.sh
 RUN mkdir /var/log/entrypoint && chown vagrant:vagrant /var/log/entrypoint
 
+RUN ls /bin
+
 USER vagrant
 
 ENTRYPOINT ["/bin/entrypoint.sh"]
