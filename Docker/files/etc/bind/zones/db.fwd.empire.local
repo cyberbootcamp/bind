@@ -17,3 +17,5 @@ $TTL	604800
         IN      NS      ns1.empire.local.
 ;Name Server A records
 ns1.empire.local.      IN      A       10.55.55.3
+endore.empire.local.	IN	CNAME	ns1.empire.local.
+endore2.empire.local.	IN	CNAME	ns1.empire.local.
