@@ -9,8 +9,8 @@ RUN apt-get update \
 
 WORKDIR /
 #COPY files/bin/entrypoint.sh /bin/entrypoint.sh
-COPY files/etc/ /etc
-COPY files/bin/ /bin
+COPY files/etc/* /etc/.
+COPY files/bin/* /bin/.
 RUN cat etc/hosts.ext >> etc/hosts
 RUN /bin/bash -c cat /etc/hosts
 #RUN chmod 755 /bin/entrypoint.sh && chown vagrant:vagrant /bin/entrypoint.sh
