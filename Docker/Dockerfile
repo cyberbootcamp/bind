@@ -10,8 +10,8 @@ RUN apt-get update \
 #WORKDIR /
 COPY files/etc/bind/ /etc/bind/
 COPY files/etc/apt/ /etc/apt/
-RUN wget -q http://www.webmin.com/jcameron-key.asc -O- | apt-key add
-RUN apt-get update && apt-get install -yq webmin
+#RUN wget -q http://www.webmin.com/jcameron-key.asc -O- | apt-key add
+#RUN apt-get update && apt-get install -yq webmin
 
 COPY files/bin/entrypoint.sh /bin/entrypoint.sh
 RUN chmod 755 /bin/entrypoint.sh && chown vagrant:vagrant /bin/entrypoint.sh
