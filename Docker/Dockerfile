@@ -4,13 +4,13 @@ LABEL maintainer="korben@kirscht.com"
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
- && apt-get install -yq bind9 bind9utils bind9-doc \
+ && apt-get install -yq bind9 bind9utils bind9-doc wget \
  && useradd -m vagrant
 
 #WORKDIR /
 COPY files/etc/bind/ /etc/bind/
 COPY files/etc/apt/ /etc/apt/
-RUN wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add –
+RUN wget -q http://www.webmin.com/jcameron-key.asc -O- | apt-key add –
 RUN apt-get update && apt-get install -yq webmin
 
 COPY files/bin/entrypoint.sh /bin/entrypoint.sh
