@@ -4,7 +4,7 @@ LABEL maintainer="korben@kirscht.com"
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
- && apt-get install -yq gnupg bind9 bind9utils bind9-doc wget \
+ && apt-get install -yq gnupg bind9 bind9utils bind9-doc wget net-tools \
  && useradd -m vagrant
 
 #WORKDIR /
