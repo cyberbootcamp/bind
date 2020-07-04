@@ -9,7 +9,8 @@ RUN apt-get update \
 
 #WORKDIR /
 COPY files/etc/bind/ /etc/bind/
-COPY files/etc/apt/ /etc/apt/
+COPY files/etc/apt/ /etc/apt
+RUN mkdir -p /var/log/bind/ && chown bind:bind /var/log/bind
 #RUN wget -q http://www.webmin.com/jcameron-key.asc -O- | apt-key add
 #RUN apt-get update && apt-get install -yq webmin
 
