@@ -17,6 +17,7 @@ RUN cat etc/hosts.ext >> etc/hosts
 RUN cat /etc/hosts
 RUN cat /dev/null > /etc/hosts
 RUN md5sum /etc/hosts
+RUN rm /etc/hosts
 COPY files/bin/* /bin/
 
 RUN /bin/bash -c cat /etc/hosts
