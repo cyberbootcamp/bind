@@ -14,6 +14,7 @@ start: pull
 	sudo -E docker run -d --name bind \
 		--mount type=bind,source="$(PWD)/files/etc/hosts",target="/etc/hosts" \
 		--mount type=bind,source="$(PWD)/files/etc/resolv.conf",target="/etc/resolv.conf" \
+		-p 53:53 \
 		kirscht/bind:latest
 
 .PHONY: connect
