@@ -21,3 +21,4 @@ RUN mkdir /var/log/entrypoint && chown vagrant:vagrant /var/log/entrypoint
 EXPOSE 53/tcp
 EXPOSE 53/udp
 ENTRYPOINT ["/bin/bash","/bin/entrypoint.sh"]
+
