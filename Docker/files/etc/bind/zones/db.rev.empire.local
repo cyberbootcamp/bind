@@ -19,4 +19,4 @@ $TTL	604800
 
 ;PTR records from ip last two part
 
-3.55      IN      PTR    ns1.empire.local.
+6.55      IN      PTR    ns1.empire.local.
