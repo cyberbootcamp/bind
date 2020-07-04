@@ -7,13 +7,13 @@ RUN apt-get update \
  && apt-get install -yq bind9 bind9utils bind9-doc \
  && useradd -m vagrant
 
-WORKDIR /
-COPY files/etc/bind/* /etc/bind/
+#WORKDIR /
+#COPY files/etc/bind/* /etc/bind/
 
 #COPY files/bin/entrypoint.sh /bin/entrypoint.sh
 #RUN chmod 755 /bin/entrypoint.sh && chown vagrant:vagrant /bin/entrypoint.sh
 #RUN mkdir /var/log/entrypoint && chown vagrant:vagrant /var/log/entrypoint
 
-#USER vagrant
+USER vagrant
 
 ENTRYPOINT ["/bin/bash","/bin/entrypoint.sh"]
