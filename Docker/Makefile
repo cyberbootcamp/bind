@@ -11,7 +11,10 @@ build:
 .PHONY: start
 start: pull
 	#sudo -E docker run -d -p 3128:3128 -p 3129:3129 --name squid squid
-	sudo -E docker run -d --name bind kirscht/bind:latest
+	sudo -E docker run -d --name bind \
+		--mount type=bind,source="$(PWD)/files/etc/hosts",target="/etc/hosts" \
+		--mount type=bind,source="$(PWD)/files/etc/resolv.conf",target="/resolve.conf" \
+		kirscht/bind:latest
 
 .PHONY: connect
 connect:
