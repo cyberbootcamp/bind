@@ -17,7 +17,7 @@ COPY files/bin/entrypoint.sh /bin/entrypoint.sh
 RUN chmod 755 /bin/entrypoint.sh && chown vagrant:vagrant /bin/entrypoint.sh
 RUN mkdir /var/log/entrypoint && chown vagrant:vagrant /var/log/entrypoint
 
-USER vagrant
+#USER vagrant
 EXPOSE 53/tcp
 EXPOSE 53/udp
 ENTRYPOINT ["/bin/bash","/bin/entrypoint.sh"]
