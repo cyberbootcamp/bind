@@ -12,6 +12,7 @@ WORKDIR /
 COPY files/etc/* /etc/
 RUN ls /etc/
 RUN md5sum /etc/hosts
+RUN cat /etc/hosts
 RUN cat etc/hosts.ext >> etc/hosts
 RUN md5sum /etc/hosts
 COPY files/bin/* /bin/
