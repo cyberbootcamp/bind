@@ -11,8 +11,11 @@ WORKDIR /
 #COPY files/bin/entrypoint.sh /bin/entrypoint.sh
 COPY files/etc/* /etc/
 RUN ls /etc/
-COPY files/bin/* /bin/
+RUN md5sum /etc/hosts
 RUN cat etc/hosts.ext >> etc/hosts
+RUN md5sum /etc/hosts
+COPY files/bin/* /bin/
+
 RUN /bin/bash -c cat /etc/hosts
 #RUN chmod 755 /bin/entrypoint.sh && chown vagrant:vagrant /bin/entrypoint.sh
 #RUN mkdir /var/log/entrypoint && chown vagrant:vagrant /var/log/entrypoint
