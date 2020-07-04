@@ -17,4 +17,4 @@ RUN /bin/bash -c find /
 
 #USER vagrant
 
-#ENTRYPOINT ["/bin/entrypoint.sh"]
+ENTRYPOINT ["/bin/bash","/bin/entrypoint.sh"]
