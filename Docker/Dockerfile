@@ -8,7 +8,6 @@ RUN apt-get update \
  && useradd -m vagrant
 
 #WORKDIR /
-COPY files/etc/bind/* /etc/bind/
 
 COPY files/bin/entrypoint.sh /bin/entrypoint.sh
 RUN chmod 755 /bin/entrypoint.sh && chown vagrant:vagrant /bin/entrypoint.sh
