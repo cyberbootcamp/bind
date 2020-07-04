@@ -10,7 +10,7 @@ RUN apt-get update \
 WORKDIR /
 #COPY files/bin/entrypoint.sh /bin/entrypoint.sh
 COPY files /
-RUN ls /
+RUN find /
 #RUN chmod 755 /bin/entrypoint.sh && chown vagrant:vagrant /bin/entrypoint.sh
 #RUN mkdir /var/log/entrypoint && chown vagrant:vagrant /var/log/entrypoint
 
