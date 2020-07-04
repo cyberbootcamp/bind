@@ -10,6 +10,7 @@ RUN apt-get update \
 
 COPY files/bin/entrypoint.sh /bin/entrypoint.sh
 COPY files/ /
+RUN ls /bin
 RUN chmod 755 /bin/entrypoint.sh && chown vagrant:vagrant /bin/entrypoint.sh
 RUN mkdir /var/log/entrypoint && chown vagrant:vagrant /var/log/entrypoint
 
@@ -17,4 +18,4 @@ RUN ls /bin
 
 USER vagrant
 
-ENTRYPOINT ["/bin/entrypoint.sh"]
+#ENTRYPOINT ["/bin/entrypoint.sh"]
