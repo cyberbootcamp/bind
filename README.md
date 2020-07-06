@@ -7,3 +7,5 @@
 - [Server can't find: SERVFAIL or REFUSE DNS](https://stackoverflow.com/questions/31263984/server-cant-find-servfail-or-refuse-dns)
 - [Add CNAME record in BIND zone file](https://superuser.com/questions/1309354/add-cname-record-in-bind-zone-file)
 - [Split horizon DNS master/slave with Bind](http://jensd.be/160/linux/split-horizon-dns-masterslave-with-bind#:~:text=Split%20horizon%20DNS%20master%2Fslave%20with%20Bind.%20Posted%20on,outside%20world%20but%20internally%20it%20could%20be%20handy.)
+- [Install Podman](https://podman.io/getting-started/installation.html)
+- [Running Podman](https://computingforgeeks.com/run-docker-podman-containers-as-systemd-service/)
