@@ -18,4 +18,4 @@ $TTL	604800
 ;Name Server A records
 ns1.empire.local.      IN      A       172.17.0.2
 endor.empire.local.	IN	A	10.55.55.3
-endor2.empire.local.	IN	CNAME	endore.empire.local.
+endor2.empire.local.	IN	CNAME	endor.empire.local.
