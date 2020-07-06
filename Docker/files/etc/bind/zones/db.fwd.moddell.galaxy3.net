@@ -2,7 +2,7 @@
 ; BIND data file for local loopback interface
 ;
 $TTL	604800
-@	IN	SOA	ns1.empire.kirscht.com. root.ns1.empire.kirscht.com.localhost. (
+@	IN	SOA	ns1.moddell.galaxy3.net. root.ns1.moddell.galaxy3.net.localhost. (
 			      2		; Serial
 			 604800		; Refresh
 			  86400		; Retry
@@ -14,8 +14,8 @@ $TTL	604800
 @	IN	AAAA	::1
 
 ;Name Server Information
-        IN      NS      ns1.empire.local.
+        IN      NS      ns1.galaxy3.net.
 ;Name Server A records
-ns1.empire.kirscht.com.      IN      A       172.17.0.2
-endor.empire.kirscht.com.	IN	A	10.55.55.3
-endor2.empire.kirscht.com.	IN	CNAME	endor.empire.kirscht.com.
+ns1.moddell.galaxy3.net.      IN      A       172.17.0.2
+endor.moddell.galaxy3.net.	IN	A	10.55.55.3
+endor2.moddell.galaxy3.net.	IN	CNAME	endor.moddell.galaxy3.net.
