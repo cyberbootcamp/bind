@@ -22,6 +22,6 @@ allow-update { none; }; //Since this is the primary DNS, it should be none.
 
 zone "empire.kirscht.com" IN {
 type master;
-file "/etc/bind/zones/db.fwd.empire.kirscht.com";
+file "/etc/bind/zones/db.fwd.moddell.galaxy3.net";
 allow-update { none; }; // Since this is the primary DNS, it should be none.
 };
