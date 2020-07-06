@@ -19,3 +19,9 @@ type master;
 file "/etc/bind/zones/db.rev.empire.local";
 allow-update { none; }; //Since this is the primary DNS, it should be none.
 };
+
+zone "empire.kirscht.com" IN {
+type master;
+file "/etc/bind/zones/db.fwd.empire.kirscht.com";
+allow-update { none; }; // Since this is the primary DNS, it should be none.
+};
