@@ -19,6 +19,7 @@ $TTL	604800
 
 ;PTR records from ip last two part
 
-1.55	IN	PTR	ns1.galaxy3.net.
-2.55	IN	PTR	kamino.galaxy3.net.
+;1.55	IN	PTR	ns1.galaxy3.net.
+2.55	IN	PTR	ns1.moddell.galaxy3.net.
 3.55	IN	PTR	endor.galaxy3.net.
+4.55	IN	PTR	kamino.galaxy3.net.
