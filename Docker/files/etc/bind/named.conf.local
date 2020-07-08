@@ -25,3 +25,9 @@ type master;
 file "/etc/bind/zones/db.fwd.moddell.galaxy3.net";
 allow-update { none; }; // Since this is the primary DNS, it should be none.
 };
+
+zone "arkanis.galaxy3.net" IN {
+type master;
+file "/etc/bind/zones/db.fwd.arkanis.galaxy3.net";
+allow-update { none; }; // Since this is the primary DNS, it should be none.
+};
