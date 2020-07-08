@@ -25,3 +25,4 @@ $TTL	604800
 4.55	IN	PTR	kamino.galaxy3.net.
 
 50.55	IN	PTR	tattooine.arkanis.galaxy3.net.
+51.55	IN	PTR	jakku.arkanis.galaxy3.net.
