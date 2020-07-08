@@ -16,7 +16,8 @@ $TTL	604800
 ;Name Server Information
         IN      NS      ns1.galaxy3.net.
 ;Name Server A records
-ns1.moddell.galaxy3.net.      IN      A       172.17.0.2
+;ns1.moddell.galaxy3.net.      IN      A       172.17.0.2
+ns1.moddell.galaxy3.net.      IN      A       10.55.55.2
 endor.moddell.galaxy3.net.	IN	A	10.55.55.3
 endor2.moddell.galaxy3.net.	IN	CNAME	endor.moddell.galaxy3.net.
 kamino.moddell.galaxy3.net.	IN	A	10.55.55.4
