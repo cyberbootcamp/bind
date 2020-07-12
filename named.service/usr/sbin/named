@@ -7,7 +7,7 @@ ifconfig eth1:0 10.55.55.2 netmask 255.255.255.0 up
 make pull
 
 	sudo -E docker run -d --name bind \
-		--mount type=bind,source="$(PWD)/files/etc/hosts",target="/etc/hosts" \
+		--mount type=bind,source="/etc/hosts",target="/etc/hosts" \
 		-p 10.55.55.2:53:53/tcp \
 		-p 10.55.55.2:53:53/udp \
 		kirscht/bind:latest
