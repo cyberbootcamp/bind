@@ -1,0 +1,9 @@
+[Unit]
+Description=Named
+
+[Service]
+Type=oneshot
+ExecStart=/repos/blueprints/ansible/roles/dns-master/files/startup.script
+
+[Install]
+WantedBy=multi-user.target
