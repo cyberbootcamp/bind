@@ -1,16 +1,33 @@
 #!/usr/bin/env bash
 
+exec >> /var/log/named_startup.log
+exec 2>&1
+
+make pull
+
+systemctl status docker
+systemctl start docker
+systemctl status docker
+
 cd /repos/bind/Docker
 
 ifconfig eth1:0 10.55.55.2 netmask 255.255.255.0 up
 
-make pull
+function remove () {
+	docker ps -a | grep bind && *docker stop bind ; docker rm bind)
+}
 
+function start () {
 	sudo -E docker run -d --name bind \
 		--mount type=bind,source="/etc/hosts",target="/etc/hosts" \
 		-p 10.55.55.2:53:53/tcp \
 		-p 10.55.55.2:53:53/udp \
 		kirscht/bind:latest
+}
+
+remove
+start
+
 #make pull
 #make rm
 #make start
