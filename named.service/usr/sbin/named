@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-exec >> /var/log/named_startup.log
+exec | tee -a /var/log/named_startup.log
 exec 2>&1
 
 make pull
@@ -14,7 +14,7 @@ cd /repos/bind/Docker
 ifconfig eth1:0 10.55.55.2 netmask 255.255.255.0 up
 
 function remove () {
-	docker ps -a | grep bind && *docker stop bind ; docker rm bind)
+	docker ps -a | grep bind && (docker stop bind ; docker rm bind)
 }
 
 function start () {
