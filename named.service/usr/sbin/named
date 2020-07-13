@@ -25,8 +25,16 @@ function start () {
 		galaxy3/bind:latest
 }
 
+function monitor () {
+	while :
+	do
+	  sleep 30
+	  docker ps | grep bind || exit 1
+	done
+}
 remove
 start
+monitor
 
 #make pull
 #make rm
