@@ -18,10 +18,11 @@ function remove () {
 }
 
 function start () {
+    docker pull galaxy3/bind:latest
 	sudo -E docker run -d --name bind \
 		-p 10.55.55.2:53:53/tcp \
 		-p 10.55.55.2:53:53/udp \
-		kirscht/bind:latest
+		galaxy3/bind:latest
 }
 
 remove
