@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-cp /repos/bind/etc/supervisor/conf.d/named.conf /etc/supervisor/conf.d/named.conf
+cp /repos/bind/named.service/etc/supervisor/conf.d/named.conf /etc/supervisor/conf.d/named.conf
 supervisorctl reload
