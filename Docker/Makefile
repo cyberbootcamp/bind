@@ -5,8 +5,8 @@ default:
 .PHONY: build
 build:
 	sudo -E docker build -t bind .
-	sudo -E docker tag bind kirscht/bind:latest
-	sudo -E docker push kirscht/bind:latest
+	sudo -E docker tag bind galaxy3/bind:latest
+	sudo -E docker push galaxy3/bind:latest
 
 .PHONY: start
 start:
@@ -16,7 +16,7 @@ start:
 		--mount type=bind,source="$(PWD)/files/etc/resolv.conf",target="/etc/resolv.conf" \
 		-p 10.55.55.2:53:53/tcp \
 		-p 10.55.55.2:53:53/udp \
-		kirscht/bind:latest
+		galaxy3/bind:latest
 
 
 .PHONY: connect
@@ -33,4 +33,5 @@ rm: stop
 
 .PHONY: pull
 pull:
-	sudo -E docker pull kirscht/bind:latest
+	sudo -E docker pull galaxy3/bind:latest
+
