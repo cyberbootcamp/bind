@@ -1,9 +1,0 @@
-[Unit]
-Description=Named
-
-[Service]
-Type=oneshot
-ExecStart=/usr/sbin/named
-
-[Install]
-WantedBy=multi-user.target
